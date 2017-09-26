@@ -10,7 +10,11 @@ Place image_resize.py somewhere. Then run command line, go to folder in which yo
 
 Example of script launch on Linux, Python 3.5::
 
-    # $ python image_resize.py [optional_arguments] <path_to_original> 
+```#!bash
+
+$ python image_resize.py [optional_arguments] <path_to_original>
+
+```
 
 Arguments
 -------------
