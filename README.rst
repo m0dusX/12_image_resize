@@ -17,8 +17,8 @@ Arguments
 
   **Positional arguments:**
 
-``<path_to_original>``
-    Path to original image
+  ``<path_to_original>``
+      Path to original image
 
     
   **Optional arguments:**
