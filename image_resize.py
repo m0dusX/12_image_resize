@@ -3,12 +3,7 @@ import sys
 from PIL import Image
 import os
 
-def resize_image(new_image):
-    input_image = new_image["path_to_original"]
-    filename = os.path.basename(input_image)
-    dirname = os.path.dirname(input_image)
-    img = Image.open(input_image)
-    width, height = img.size
+def get_new_dimensions(new_image, original_width, original_height):
     if "scale" in new_image:
         scale = new_image["scale"]
         new_width = width * scale
@@ -17,15 +12,24 @@ def resize_image(new_image):
         if "height" in new_image and "width" in new_image:
             new_height = new_image["height"]
             new_width = new_image["width"]
-            ratio = width / new_width
-            if new_height != height / ratio:
+            ratio = original_width / new_width
+            if new_height != original_height / ratio:
                 print('Aspect ratio of new image does not match the original!\n')
         elif "height" in new_image and "width" not in new_image:
             new_height = new_image["height"]
-            new_width  = int(new_height * width / height)
+            new_width  = int(new_height * original_width / original_height)
         elif "width" in new_image and "height" not in new_image:
             new_width = new_image["width"]
-            new_height = int(new_width * height / width)
+            new_height = int(new_width * original_height / original_width)
+    return new_width, new_height
+
+def resize_image(new_image):
+    input_image = new_image["path_to_original"]
+    filename = os.path.basename(input_image)
+    dirname = os.path.dirname(input_image)
+    img = Image.open(input_image)
+    width, height = img.size
+    new_width, new_height = get_new_dimensions(new_image, width, height)
     img = img.resize((new_width, new_height), Image.ANTIALIAS)
     if "output" in new_image:
         ouput_folder = new_image["output"]
@@ -54,7 +58,7 @@ if __name__ == '__main__':
         help="output folder for converted file (without filename)", type=str)
     args = parser.parse_args()
     if not (args.height or args.width):
-            parser.error('either --height or --width argument is required')
+            parser.error('Either --height or --width argument is required')
     if args.scale and (args.height or args.width):
         parser.error('--scale argument cannot be used with --height or --width arguments')
     #Create new dict with parsed parameters representing our new resized image 
