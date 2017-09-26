@@ -1,7 +1,7 @@
 Image Resizer
 -------------
 
-[TODO. There will be project description]
+This script resizes image according to input arguments, which can contain width, height or scale of new image. 
 
 How to use
 -------------
@@ -28,9 +28,11 @@ Arguments
 --scale               new scale of image
 --output              output folder for converted file (without filename)
 
-**IMPORTANT**: 1) --scale argument cannot be used with --height or --width arguments
+**IMPORTANT**: 1) --scale argument cannot be specified together with --height or --width arguments
 
-**IMPORTANT**: 2) If --scale argument is not specified, either --height or --width argument is required
+**IMPORTANT**: 2) if --scale argument is not specified, either --height or --width argument is required
+
+**IMPORTANT**: 3) if --output argument is not specified, converted image will be created in folder containing input image
                       
 
 Project Goals
