@@ -21,15 +21,18 @@ Arguments
 
 *Positional arguments:*
 
-``<path_to_original>``
-    Path to original image
+| Argument           | Description            |
+|--------------------|------------------------|
+| <path_to_original> | path to original image |
     
 *Optional arguments:*
     
---height              new height of image
---width               new width of image
---scale               new scale of image
---output              output folder for converted file (without filename)
+| Argument | Description                                         |
+|----------|-----------------------------------------------------|
+| --height | new height of image                                 |
+| --width  | new width of image                                  |
+| --scale  | new scale of image                                  |
+| --output | output folder for converted file (without filename) |
 
 **IMPORTANT**: 1) --scale argument cannot be specified together with --height or --width arguments
 
