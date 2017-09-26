@@ -15,10 +15,8 @@ Arguments
 
 ``image_resize.py`` positional arguments:
 
-``path_to_original``
-    path to input image
-
-
+``<path_to_original>`` - path to input image
+    
 ``image_resize.py`` optional arguments:
     
 --height              new height of image
