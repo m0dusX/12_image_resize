@@ -13,11 +13,13 @@ Place image_resize.py somewhere. Then run command line, go to folder in which yo
 Arguments
 -------------
 
-``image_resize.py`` positional arguments:
+Positional arguments:
 
-``<path_to_original>`` - path to input image
+``<path_to_original>``
+    Path to original image
+
     
-``image_resize.py`` optional arguments:
+Optional arguments:
     
 --height              new height of image
 --width               new width of image
