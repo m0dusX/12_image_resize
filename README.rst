@@ -10,9 +10,7 @@ Place image_resize.py somewhere. Then run command line, go to folder in which yo
 
 Example of script launch on Linux, Python 3.5::
 
-    
-    # $ python image_resize.py [optional_arguments] <path_to_original>
-    
+    # $ python image_resize.py [optional_arguments] <path_to_original> 
 
 Arguments
 -------------
@@ -21,7 +19,6 @@ Arguments
 
 ``<path_to_original>``
     Path to original image
-
     
 *Optional arguments:*
     
@@ -34,8 +31,7 @@ Arguments
 
 **IMPORTANT**: 2) if --scale argument is not specified, either --height or --width argument is required
 
-**IMPORTANT**: 3) if --output argument is not specified, converted image will be created in folder containing input image
-                      
+**IMPORTANT**: 3) if --output argument is not specified, converted image will be created in folder containing input image                     
 
 Project Goals
 -------------
