@@ -6,9 +6,11 @@ Image Resizer
 How to use
 -------------
 
-Place image_resize.py somewhere. Then run command line, go to folder in which you moved script and execute it with desired parameters.
+Place image_resize.py somewhere. Then run command line, go to folder in which you moved script and execute it with desired parameters (see arguments section).
 
-``$ python image_resize.py [optional_arguments] <path_to_original>``
+Example of script launch on Linux, Python 3.5::
+
+    # $ python image_resize.py [optional_arguments] <path_to_original>
 
 Arguments
 -------------
