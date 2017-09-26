@@ -15,13 +15,13 @@ Example of script launch on Linux, Python 3.5::
 Arguments
 -------------
 
-Positional arguments:
+  **Positional arguments:**
 
 ``<path_to_original>``
     Path to original image
 
     
-Optional arguments:
+  **Optional arguments:**
     
 --height              new height of image
 --width               new width of image
