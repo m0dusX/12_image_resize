@@ -6,19 +6,19 @@ Image Resizer
 How to use
 -------------
 
-Place image_resize.py.py somewhere. Then run command line, go to folder in which you moved script and execute it with desired parameters.
+Place image_resize.py somewhere. Then run command line, go to folder in which you moved script and execute it with desired parameters.
 
-``$ python image_resize.py [-h] [--width int] [--height int] [--scale int] [--output str] <path_to_original_image>``
-    Create a new virtualenv environment named *<name>*.  The environment will
-    be created in WORKON_HOME.
+``$ python image_resize.py [optional_arguments] <path_to_original_image>``
+    Create a new resized image named accordingly to filename from *<path_to_original_image>*. 
 
-    ``mkvirtualenv`` options:
-      -h                    Print help text.
-      -a project_path       Associate existing path as project directory
-      -i package            Install package in new environment. This option
-                            can be repeated to install more than one package.
-      -r requirements_file  requirements_file is passed to
-                            pip install -r requirements_file
+    ``image_resize.py`` optional arguments:
+    
+      --height              new height of image
+      --width               new width of image
+      --scale               new scale of image
+                            --scale argument cannot be used with --height or --width arguments
+      --output              output folder for converted file (without filename)
+                            if 
 
     any other options are passed on to the ``virtualenv`` command.	
 
