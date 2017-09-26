@@ -1,8 +1,10 @@
-# Image Resizer
+Image Resizer
+-------------
 
 [TODO. There will be project description]
 
-# How to use
+How to use
+-------------
 
 Place image_resize.py.py somewhere. Then run command line, go to folder in which you moved script and execute it with desired parameters.
 
@@ -16,6 +18,7 @@ $ python image_resize.py [-h] [--width int] [--height int] [--scale int] [--outp
 
 Main Commands
 -------------
+
 ``mkvirtualenv [mkvirtualenv-options] [virtualenv-options] <name>``
     Create a new virtualenv environment named *<name>*.  The environment will
     be created in WORKON_HOME.
@@ -30,6 +33,7 @@ Main Commands
 
     any other options are passed on to the ``virtualenv`` command.	
 
-# Project Goals
+Project Goals
+-------------
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
