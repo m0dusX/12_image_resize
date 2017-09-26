@@ -10,16 +10,12 @@ Place image_resize.py.py somewhere. Then run command line, go to folder in which
 
 Example of script launch on Linux, Python 3.5:
 
-```#!bash
-
-$ python image_resize.py [-h] [--width int] [--height int] [--scale int] [--output str] <path_to_original_image>
-
-```
+``$ python image_resize.py [-h] [--width int] [--height int] [--scale int] [--output str] <path_to_original_image>``
 
 Main Commands
 -------------
 
-``mkvirtualenv [mkvirtualenv-options] [virtualenv-options] <name>``
+
     Create a new virtualenv environment named *<name>*.  The environment will
     be created in WORKON_HOME.
 
