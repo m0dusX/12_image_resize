@@ -15,18 +15,22 @@ Example of script launch on Linux, Python 3.5::
 Arguments
 -------------
 
-**Positional arguments:**
+*Positional arguments:*
 
 ``<path_to_original>``
     Path to original image
 
     
-**Optional arguments:**
+*Optional arguments:*
     
 --height              new height of image
 --width               new width of image
 --scale               new scale of image
 --output              output folder for converted file (without filename)
+
+**IMPORTANT**: 1) --scale argument cannot be used with --height or --width arguments
+
+**IMPORTANT**: 2) If --scale argument is not specified, either --height or --width argument is required
                       
 
 Project Goals
