@@ -16,29 +16,37 @@ $ python image_resize.py [optional_arguments] <path_to_original>
 
 ```
 
+Output data example:
+
+```#!bash
+
+Image was successfully converted! Check D:\books\pic.jpeg
+
+```
+
 Arguments
 -------------
 
 *Positional arguments:*
 
-| Argument           | Description            |
-|--------------------|------------------------|
-| <path_to_original> | path to original image |
+| Argument           | Type | Description            |
+|--------------------|------|------------------------|
+| <path_to_original> | str  | path to original image |
     
 *Optional arguments:*
     
-| Argument | Description                                         |
-|----------|-----------------------------------------------------|
-| --height | new height of image                                 |
-| --width  | new width of image                                  |
-| --scale  | new scale of image                                  |
-| --output | output folder for converted file (without filename) |
+| Argument | Type | Description                                         |
+|----------|------|-----------------------------------------------------|
+| --height | int  | new height of image                                 |
+| --width  | int  | new width of image                                  |
+| --scale  | int  | new scale of image                                  |
+| --output | str  | output folder for converted file (without filename) ||
 
 **IMPORTANT**: 1) --scale argument cannot be specified together with --height or --width arguments
 
 **IMPORTANT**: 2) if --scale argument is not specified, either --height or --width argument is required
 
-**IMPORTANT**: 3) if --output argument is not specified, converted image will be created in folder containing input image                     
+**IMPORTANT**: 3) if --output argument is not specified, converted image will be created in folder containing input image 
 
 Project Goals
 -------------
