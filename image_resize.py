@@ -36,9 +36,8 @@ def read_image(filepath):
 
 def save_image(new_location, new_width, new_height, img):
     filename_splitted = new_location['filename'].split('.')
-    new_filename = '{}__{}x{}.{}'.format(filename_splitted[0],
-                                         new_width, new_height,
-                                         filename_splitted[1])
+    new_filename = '{}__{}x{}.{}'.format(
+        filename_splitted[0], new_width, new_height, filename_splitted[1])
     if new_location['output'] is not None:
         ouput_folder = new_location['output']
         output_path = os.path.join(ouput_folder, new_filename)
