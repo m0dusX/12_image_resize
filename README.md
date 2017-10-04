@@ -20,7 +20,7 @@ Output data example:
 
 ```#!bash
 
-Image was successfully converted! Check D:\books\pic.jpeg
+Image was successfully converted! Check D:\books\pic__3900x1300.jpeg
 
 ```
 
