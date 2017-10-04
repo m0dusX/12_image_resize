@@ -9,22 +9,22 @@ def print_caution():
 
 
 def get_new_dimensions(new_image, original_width, original_height):
-    if new_image["scale"] is not None:
-        scale = new_image["scale"]
+    if new_image['scale'] is not None:
+        scale = new_image['scale']
         new_width = width * scale
         new_height = height * scale
     else:
-        if new_image["height"] is not None and new_image["width"] is not None:
-            new_height = new_image["height"]
-            new_width = new_image["width"]
+        if new_image['height'] is not None and new_image['width'] is not None:
+            new_height = new_image['height']
+            new_width = new_image['width']
             ratio = original_width / new_width
             if new_height != original_height / ratio:
                 print_caution()
-        elif new_image["height"] is not None:
-            new_height = new_image["height"]
+        elif new_image['height'] is not None:
+            new_height = new_image['height']
             new_width = int(new_height * original_width / original_height)
-        elif new_image["width"] is not None:
-            new_width = new_image["width"]
+        elif new_image['width'] is not None:
+            new_width = new_image['width']
             new_height = int(new_width * original_height / original_width)
     return new_width, new_height
 
@@ -35,12 +35,12 @@ def read_image(filepath):
 
 
 def save_image(new_location, new_width, new_height, img):
-    filename_splitted = new_location['filename'].split(".")
-    new_filename = "{}__{}x{}.{}".format(filename_splitted[0],
+    filename_splitted = new_location['filename'].split('.')
+    new_filename = '{}__{}x{}.{}'.format(filename_splitted[0],
                                          new_width, new_height,
                                          filename_splitted[1])
-    if new_location["output"] is not None:
-        ouput_folder = new_location["output"]
+    if new_location['output'] is not None:
+        ouput_folder = new_location['output']
         output_path = os.path.join(ouput_folder, new_filename)
         img.save(output_path)
     else:
@@ -50,13 +50,13 @@ def save_image(new_location, new_width, new_height, img):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="Image Resizer")
-    parser.add_argument("path_to_original", help="path to file", type=str)
-    parser.add_argument("--width", help="new width of image", type=int)
-    parser.add_argument("--height", help="new height of image", type=int)
-    parser.add_argument("--scale", help="new scale of image", type=int)
-    parser.add_argument("--output", help="output folder for converted " +
-                        "file (without filename)", type=str)
+    parser = argparse.ArgumentParser(description='Image Resizer')
+    parser.add_argument('path_to_original', help='path to file', type=str)
+    parser.add_argument('--width', help='new width of image', type=int)
+    parser.add_argument('--height', help='new height of image', type=int)
+    parser.add_argument('--scale', help='new scale of image', type=int)
+    parser.add_argument('--output', help='output folder for converted ' +
+                        'file (without filename)', type=str)
     args = parser.parse_args()
     if not (args.height or args.width) and not args.scale:
             parser.error('Either --height or --width argument is required')
@@ -65,9 +65,9 @@ if __name__ == '__main__':
                      '--height or --width arguments')
     input_image = args.path_to_original
     new_image_dimensions = {
-        "scale": args.scale,
-        "width": args.width,
-        "height": args.height,
+        'scale': args.scale,
+        'width': args.width,
+        'height': args.height,
         }
     new_image_location = {
         'filename': os.path.basename(input_image),
@@ -82,5 +82,5 @@ if __name__ == '__main__':
                                             Image.ANTIALIAS)
     converted_path = save_image(new_image_location, new_width,
                                 new_height, converted_image)
-    print("Image was successfully converted! Check {}".format(converted_path))
+    print('Image was successfully converted! Check {}'.format(converted_path))
     sys.exit()
