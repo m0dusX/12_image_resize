@@ -1,7 +1,10 @@
 Image Resizer
 -------------
 
-This script resizes image according to input arguments, which can contain width, height or scale of new image and then saves new image to specified (or not) output folder. New image is named following this pattern: [original_name]__[new_width]x[new_height].[original_format]
+This script resizes image according to input arguments, which can contain width, height or scale of new image and then saves new image to specified (or not) output folder. New image is named following this pattern: 
+
+**[original_name]__[new_width]x[new_height].[original_format]**
+
 Works with all known image formats.
 
 How to use
