@@ -46,7 +46,7 @@ Arguments
 | --scale  | int  | new scale of image                                  |
 | --output | str  | output folder for converted file (without filename) ||
 
-**IMPORTANT**: 1) --scale argument cannot be specified together with --height or --width arguments
+**IMPORTANT**: 1) --scale argument cannot be specified together with --height or/and --width arguments
 
 **IMPORTANT**: 2) if --scale argument is not specified, either --height or --width argument is required
 
